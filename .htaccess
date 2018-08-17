@@ -1,0 +1,3 @@
+RewriteEngine on
+#Redirect 404 errors to /api/shorturl/index.php
+ErrorDocument 404 /url-shortener-microservice/api/shorturl/index.php
