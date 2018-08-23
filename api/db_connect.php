@@ -1,12 +1,12 @@
 <?php
 
 set_exception_handler(function ($e) {
-    echo "Database error. Maybe check db_config.ini?";
+    echo "Database error. Maybe check config.ini?";
     error_log($e->getMessage());
     exit();
 });
 
-$dbCreds = parse_ini_file(__DIR__ . "/../db_config/db_config.ini");
+$dbCreds = parse_ini_file(__DIR__ . "/../config/db_config.ini");
 $dsn = "{$dbCreds['type']}:host={$dbCreds['host']};dbname={$dbCreds['name']}";
 $user = $dbCreds['user'];
 $pass = $dbCreds['pass'];
